@@ -1,7 +1,7 @@
 import { Box, Button, Text, TextField, Image } from '@skynexui/components'
 import React from 'react'
 import { useRouter } from 'next/router'
-import appConfig from './config.json'
+import appConfig from '../config.json'
 
 function Titulo(props) {
   const Tag = props.tag || 'h1'
@@ -76,7 +76,8 @@ export default function PaginaInicial() {
             onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault()
               // window.location.href = '/chat'
-              roteamneto.push('/chat')
+              // roteamento.push('/chat?username=' + username)
+              roteamneto.push(`/chat?username=${username}`)
             }}
             styleSheet={{
               display: 'flex',
